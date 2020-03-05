@@ -30,14 +30,23 @@ namespace Scrabble.Tests
      char[] result = {'h', 'e', 'l', 'l', 'o'};
      CollectionAssert.AreEqual(result, newGame.MakeArray("hello"));
    }
-
    [TestMethod]
-   public void GetAll_CreateEmptyDictionary_Dictionary()
+   public void Count_CountValueSumOfArray_Integer()
    {
-    //  Game newGame = new Game("hello");
-     Dictionary<int, char[]> _gameDictionary = new Dictionary <int, char[]>(){};
-     Dictionary<int, char[]> result = Game.GetAll();
-     CollectionAssert.AreEqual(result, _gameDictionary);
+     Game newGame = new Game("MAP");
+     char[] intoArray = newGame.MakeArray("MAP");
+     int result = newGame.Count(intoArray);
+
+     Assert.AreEqual(result, 7);
    }
+
+  //  [TestMethod]
+  //  public void GetAll_CreateEmptyDictionary_Dictionary()
+  //  {
+  //    Dictionary<char, int> _gameDictionary = new Dictionary <char, int>(){};
+  //    Dictionary<char, int> result = Game.GetAll();
+  //    CollectionAssert.AreEqual(result, _gameDictionary);
+  //  }
+
   }
 }

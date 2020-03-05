@@ -39,7 +39,7 @@ namespace Scrabble.Models
             Sum += 0;
           }
       }
-        Console.WriteLine(Sum);
+       
         return Sum;
     }
     // public static Dictionary<char, int> GetAll()
